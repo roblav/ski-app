@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/roblav/ski-app#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "grunt": "^0.4.5"
   }
 }
