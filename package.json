@@ -1,0 +1,20 @@
+{
+  "name": "ski-app",
+  "version": "0.0.0",
+  "description": "Monitor the skiing conditions for ski resorts in Scotland",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-lavender:roblav/ski-app.git"
+  },
+  "author": "Robert Lavender",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.13.4",
+    "grunt": "~0.4.5",
+    "grunt-nodemon": "~0.4.1"
+  }
+}
