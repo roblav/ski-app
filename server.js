@@ -7,4 +7,6 @@ app.get('/', function(req, res) {
     res.sendfile('./public/table.html');
 });
 
-app.listen(3000);
+app.listen(3000, function () {
+    console.log('Example app listening on port 3000!');
+});
