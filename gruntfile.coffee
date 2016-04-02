@@ -7,7 +7,7 @@ module.exports = (grunt) ->
     # configure nodemon
     nodemon:
       dev:
-        script: 'server.js'
+        script: 'app.js'
 
   # loading local tasks
   # grunt.loadTasks "tasks"

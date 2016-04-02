@@ -1,5 +1,7 @@
 from lxml import html
 import requests
+import pymongo
+import datetime
 
 page = requests.get('http://www.cairngormmountain.org/lifts-pistes/')
 tree = html.fromstring(page.content)
@@ -43,7 +45,18 @@ skiRunGrades = [
 #      {"runName":"Ptarmigan Bowl", "runStatus": "open", "runGrade":"blue"}
 #    ]
 
+#today = datetime.date.today()
+now = datetime.datetime.now()
+
 data = {
+    "datestamp": {
+        "year": now.year,
+        "month": now.month,
+        "day": now.day,
+        "hour": now.hour,
+        "minute": now.minute
+    },
+    "resort": "Cairngorm",
     "mountainStatus": [],
     "mountainRuns": [],
     "mountainLifts": []
@@ -63,6 +76,42 @@ for i, elem in enumerate(skiRunGrades):
     #print(i, elem)
     data["mountainRuns"][i]["runGrade"] = elem
 
-print data
+#print data
 
+# Local Connection to Mongo DB
+#try:
+#    conn=pymongo.MongoClient()
+#    print "Connected successfully!!!"
+#except pymongo.errors.ConnectionFailure, e:
+#   print "Could not connect to MongoDB: %s" % e
+#conn
+#
+#db = conn.mydb
+#db
+#
+#collection = db.my_collection
+#collection
 
+#collection.insert(data)
+
+#Heroku Connection
+
+# If you are using a PaaS add-on integration e.g. via Heroku, the URI is usually available via an environment variable, often
+# named "MONGOLAB_URI". Consult the documentation for the add-on you are using.
+mongolab_uri = "mongodb://heroku_s1bc2vtt:vkv4ltahhpr1r417v95rqcbi4r@ds025469.mlab.com:25469/heroku_s1bc2vtt"
+
+#https://github.com/mongolab/mongodb-driver-examples/blob/master/python/pymongo_production_connection_example.py
+
+try:
+    conn = pymongo.MongoClient(mongolab_uri)
+    print "Connected successfully!!!"
+except pymongo.errors.ConnectionFailure, e:
+   print "Could not connect to MongoDB: %s" % e
+
+conn
+
+db = conn.get_default_database()
+
+collection = db.my_collection
+
+collection.insert(data)
