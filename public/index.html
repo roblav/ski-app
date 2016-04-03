@@ -1,46 +1,38 @@
-<!DOCTYPE html>
-<html lang="">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title Page</title>
+{% block main %}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-    
-    <style>
-        .zebra{
-            background-color: skyblue;   
-        }
-    </style>
+<h1 class="text-center">Display a list of all the JSON files test</h1>
+{{ view }}
+<hr>
+{{ data.name }}
+<hr>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn t work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
-</head>
+{{ data.results["mountainLifts"] }}
 
-<body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="text-center">Ski App</h1>
-        </div>
-    </div>
+<h2>Mountain Status</h2>
 
+<strong>Operation Update</strong>
+data.results["mountainStatus"][0]
 
-    <div class="container">
+<h2>Ski Lifts</h2>
 
-        <h1 class="text-center">Display a list of all the JSON files</h1>
+    <ul>
+        {% for item in data.results["mountainLifts"] %}
+        <li>{{ item.lift }} - {{ item["lift--status"] }}</li>
+        {% else %}
+        <li>This would display if the 'item' collection were empty</li>
+        {% endfor %}
+    </ul>
 
-    </div>
+<h2>Ski Runs</h1>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <ul>
+        {% for item in data.results["mountainRuns"] %}
+        <li>{{ item["run"] }} - {{ item["run--status"] }}</li>
+        {% else %}
+        <li>This would display if the 'item' collection were empty</li>
+        {% endfor %}
+    </ul>
 
-</body>
-
-</html>
+{% endblock %}

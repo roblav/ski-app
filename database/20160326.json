@@ -1,0 +1,238 @@
+{
+  "_id": {
+    "$oid": "56f706831e696600034989ee"
+  },
+  "datestamp": {
+    "month": 3,
+    "year": 2016,
+    "hour": 22,
+    "day": 26,
+    "minute": 0
+  },
+  "mountainStatus": [
+    {
+      "operationUpdate": [
+        "\nThe forecast for tomorrow is for very high winds easing off around mid day. This is likely to affect our ability to offer any snow-sports first thing so it is best not travelling to the hill until we have updated around 8.15 am.\nOn the plus side it is set to turn colder with snow to low levels and light winds all next week, so it looks like a good week ahead for some Easter Holiday snow-sports.\nKeep the faith\n"
+      ]
+    },
+    {
+      "snowLevel": [
+        "\nThere is snow from the car park level upwards.\n"
+      ]
+    },
+    {
+      "verticalRuns": [
+        "\n500 metres.\n"
+      ]
+    }
+  ],
+  "resort": "Cairngorm",
+  "mountainLifts": [
+    {
+      "liftName": "Car Park T Bar",
+      "liftStatus": "opening"
+    },
+    {
+      "liftName": "Fiacaill Ridge Poma",
+      "liftStatus": "closed"
+    },
+    {
+      "liftName": "Sunkid Megastar",
+      "liftStatus": "on hold"
+    },
+    {
+      "liftName": "Coire Cas T Bar",
+      "liftStatus": "closed"
+    },
+    {
+      "liftName": "Coire na Ciste T Bar",
+      "liftStatus": "on hold"
+    },
+    {
+      "liftName": "M1 Poma",
+      "liftStatus": "on hold"
+    },
+    {
+      "liftName": "Polar Express Poma",
+      "liftStatus": "on hold"
+    },
+    {
+      "liftName": "Ptarmigan T Bar",
+      "liftStatus": "on hold"
+    },
+    {
+      "liftName": "West Wall Poma",
+      "liftStatus": "on hold"
+    },
+    {
+      "liftName": "Day Lodge Poma",
+      "liftStatus": "on hold"
+    },
+    {
+      "liftName": "Funicular Railway",
+      "liftStatus": "closed"
+    }
+  ],
+  "mountainRuns": [
+    {
+      "runGrade": "red",
+      "runName": "Half Pipe",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Ptarmigan Bowl",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Terrain Park",
+      "runStatus": "opening"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Ciste Fairway",
+      "runStatus": "on hold"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Ciste Bowl",
+      "runStatus": "on hold"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Traverse",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Coire Cas",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Cas Shred",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "105",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "green",
+      "runName": "ZigZags",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "Gun Barrel",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "red",
+      "runName": "Chicken Gully",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "Fiacaill Piste",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "red",
+      "runName": "M1",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "M1 105 Link",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "red",
+      "runName": "White Lady",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "Sheiling",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "The Sheiling Shred",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Cottam's Way",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Burnside",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Home Road",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "green",
+      "runName": "Car Park",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "Fiacaill Ridge",
+      "runStatus": "open"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "M2",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "red",
+      "runName": "Ciste Gully",
+      "runStatus": "opening"
+    },
+    {
+      "runGrade": "black",
+      "runName": "West Wall",
+      "runStatus": "opening"
+    },
+    {
+      "runGrade": "red",
+      "runName": "Ryvoan",
+      "runStatus": "opening"
+    },
+    {
+      "runGrade": "red",
+      "runName": "Aonach Bowl",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "red",
+      "runName": "East Wall No 1 Gully",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "black",
+      "runName": "East Wall No 2 Gully",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "Over Yonder",
+      "runStatus": "closed"
+    },
+    {
+      "runGrade": "blue",
+      "runName": "Day Lodge",
+      "runStatus": "closed"
+    }
+  ]
+}

@@ -1,11 +1,34 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var nunjucks = require('nunjucks');
 
 app.use('/', express.static(__dirname + '/public'));
 
-app.get('/', function (req, res) {
-    res.render('index');
+nunjucks.configure('public', {
+    autoescape: true,
+    watch: true,
+    express: app
+});
+
+app.get('/index', function (req, res) {
+    res.render('index.html');
+});
+
+app.get('/display-one-day', function (req, res) {
+    res.render('display-one-day.html');
+});
+
+app.get('/test', function(req, res) {
+    res.render('test.html', {
+        title : 'My First Nunjucks Page',
+        items : [
+            { name : 'item #1' },
+            { name : 'item #2' },
+            { name : 'item #3' },
+            { name : 'item #4' }
+        ]
+    });
 });
 
 app.get('/skiconditions/:date', function (req, res) {
@@ -16,7 +39,8 @@ app.get('/skiconditions/:date', function (req, res) {
         if (error) {
             return console.error(error.message);
         }
-        res.send(data);
+        var json = JSON.parse(data);
+        res.render('index.html', {"data":json, "view":data});
     });
 });
 
