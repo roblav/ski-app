@@ -40,10 +40,11 @@ app.get('/skiconditions/:date', function (req, res) {
             return console.error(error.message);
         }
         var json = JSON.parse(data);
-        res.render('index.html', {"data":json, "view":data});
+        //From this data I want to grab the runs based on ski-grade
+        res.render('ski-results.html', {"data":json, "view":data});
     });
 });
 
 app.listen(3000, function () {
-    console.log('BOB Example app listening on port 3000!');
+    console.log('Example app listening on port 3000!');
 });

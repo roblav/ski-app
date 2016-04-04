@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h1 class="text-center">Display a list of all the JSON files test</h1>
+{# {{ view }} #}
+<hr>
+{{ data.name }}
+<hr>
+
+{{ data.results["mountainLifts"] }}
+
+<h2>Mountain Status</h2>
+
+<strong>Operation Update</strong>
+{{ data.mountainStatus[0].operationUpdate }}
+
+<h2>Ski Lifts</h2>
+
+    <ul>
+        {% for item in data.mountainLifts %}
+        <li>{{ item.liftName }} - {{ item.liftStatus }}</li>
+        {% else %}
+        <li>This would display if the 'item' collection were empty</li>
+        {% endfor %}
+    </ul>
+
+<h2>Ski Runs</h2>
+
+
+
+
+<div class="row">
+
+    <div class="col-md-3 greenrun" rel="js-greenruns">
+        <h1 class="text-center">Green Runs</h1>
+        <ul>
+            {% for item in data.mountainRuns %}
+            {% if item.runGrade == 'green' %}
+            <li>{{ item["runGrade"] }} - {{ item.runName }} - {{ item.runStatus }}</li>
+            {% endif %}
+            {% else %}
+            <p>This would display if the 'item' collection were empty</p>
+            {% endfor %}
+        </ul>
+        <p>Graph goes here</p>
+    </div>
+
+    <div class="col-md-3 bluerun" rel="js-blueruns">
+        <h1 class="text-center">Blue Runs</h1>
+        <ul>
+            {% for item in data.mountainRuns %}
+            {% if item.runGrade == 'blue' %}
+            <li>{{ item["runGrade"] }} - {{ item.runName }} - {{ item.runStatus }}</li>
+            {% endif %}
+            {% else %}
+            <p>This would display if the 'item' collection were empty</p>
+            {% endfor %}
+        </ul>
+        <p>Graph goes here</p>
+    </div>
+
+    <div class="col-md-3 redrun" rel="js-redruns">
+        <h1 class="text-center">Red Runs</h1>
+        <ul>
+            {% for item in data.mountainRuns %}
+            {% if item.runGrade == 'red' %}
+            <li>{{ item["runGrade"] }} - {{ item.runName }} - {{ item.runStatus }}</li>
+            {% endif %}
+            {% else %}
+            <p>This would display if the 'item' collection were empty</p>
+            {% endfor %}
+        </ul>
+        <p>Graph goes here</p>
+    </div>
+
+    <div class="col-md-3 blackrun" rel="js-blackruns">
+        <h1 class="text-center">Black Runs</h1>
+        <ul>
+            {% for item in data.mountainRuns %}
+            {% if item.runGrade == 'black' %}
+            <li>{{ item["runGrade"] }} - {{ item.runName }} - {{ item.runStatus }}</li>
+            {% endif %}
+            {% else %}
+            <p>This would display if the 'item' collection were empty</p>
+            {% endfor %}
+        </ul>
+        <p>Graph goes here</p>
+    </div>
+</div>
+
+
+{% endblock %}
