@@ -40,7 +40,10 @@ app.get('/skiconditions/:date', function (req, res) {
             return console.error(error.message);
         }
         var json = JSON.parse(data);
-        //From this data I want to grab the runs based on ski-grade
+        //From this data get the count for open and closed runs
+        //open, opening, closed, on hold
+        //return object for each run [Start to use TDD]
+
         res.render('ski-results.html', {"data":json, "view":data});
     });
 });

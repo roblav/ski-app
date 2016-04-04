@@ -9,10 +9,26 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     
     <style>
         .zebra{
             background-color: skyblue;   
+        }
+        .ct-series-a .ct-slice-pie {
+            fill: hsl(120, 40%, 60%);
+        }
+        .ct-series-b .ct-slice-pie {
+            stroke: white;
+            stroke-width: 4px;
+        }
+        .ct-label {
+            fill: rgba(255,255,255,1);
+            color: rgba(255,255,255,.4);
+            font-size: 2rem;
+            line-height: 1;
         }
     </style>
 

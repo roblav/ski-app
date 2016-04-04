@@ -34,6 +34,10 @@
 
     <div class="col-md-3 greenrun" rel="js-greenruns">
         <h1 class="text-center">Green Runs</h1>
+
+        <p>Graph goes here</p>
+        <div class="ct-chart ct-perfect-fourth" id="chart1"></div>
+
         <ul>
             {% for item in data.mountainRuns %}
             {% if item.runGrade == 'green' %}
@@ -43,11 +47,14 @@
             <p>This would display if the 'item' collection were empty</p>
             {% endfor %}
         </ul>
-        <p>Graph goes here</p>
     </div>
 
     <div class="col-md-3 bluerun" rel="js-blueruns">
         <h1 class="text-center">Blue Runs</h1>
+
+        <p>Graph goes here</p>
+        <div class="ct-chart ct-perfect-fourth" id="chart2"></div>
+
         <ul>
             {% for item in data.mountainRuns %}
             {% if item.runGrade == 'blue' %}
@@ -57,11 +64,12 @@
             <p>This would display if the 'item' collection were empty</p>
             {% endfor %}
         </ul>
-        <p>Graph goes here</p>
     </div>
 
     <div class="col-md-3 redrun" rel="js-redruns">
         <h1 class="text-center">Red Runs</h1>
+        <p>Graph goes here</p>
+        <div class="ct-chart ct-perfect-fourth" id="chart3"></div>
         <ul>
             {% for item in data.mountainRuns %}
             {% if item.runGrade == 'red' %}
@@ -76,6 +84,8 @@
 
     <div class="col-md-3 blackrun" rel="js-blackruns">
         <h1 class="text-center">Black Runs</h1>
+        <p>Graph goes here</p>
+        <div class="ct-chart ct-perfect-fourth" id="chart4"></div>
         <ul>
             {% for item in data.mountainRuns %}
             {% if item.runGrade == 'black' %}
@@ -89,5 +99,26 @@
     </div>
 </div>
 
+<script>
+    var data1 = { series: [7, 5] };
+    pieChart('#chart1', data1);
+    var data2 = { series: [5, 5] };
+    pieChart('#chart2', data2);
+    var data2 = { series: [4, 4] };
+    pieChart('#chart3', data2);
+    var data2 = { series: [1, 1] };
+    pieChart('#chart4', data2);
+
+    var sum = function(a, b) { return a + b };
+
+    function pieChart(target, data){
+        new Chartist.Pie(target, data, {
+            labelInterpolationFnc: function(value) {
+                return Math.round(value / data.series.reduce(sum) * 100) + '%';
+            }
+        });
+    }
+
+</script>
 
 {% endblock %}
